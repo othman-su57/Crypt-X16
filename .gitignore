@@ -11,6 +11,8 @@
 *.LIB
 *.log
 *.set
+*.vcd
+*.cf
 compilation.order
 synthesis.order
 
