@@ -28,7 +28,7 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=
+HierarchyInformation=register_file_tb|behavioral|0
 ShowHide=ShowTopLevel
 Selected=
 
@@ -41,7 +41,6 @@ Selected=
 /crypto_coprocessor.vhd=-1
 /non_linear_lookup_TB.vhd=-1
 /register_file_TB.vhd=-1
-/register_file_TB_runtest.do=-1
 work/work.lib=-1
 
 [Files.Data]
@@ -53,6 +52,5 @@ work/work.lib=-1
 .\src\crypto_coprocessor.vhd=VHDL Source Code
 .\src\non_linear_lookup_TB.vhd=VHDL Source Code
 .\src\register_file_TB.vhd=VHDL Source Code
-.\src\register_file_TB_runtest.do=Macro
 .\src\work\work.lib=External File
 
