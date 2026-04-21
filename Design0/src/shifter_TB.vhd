@@ -1,29 +1,20 @@
-		  library ieee;
-use ieee.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;		-- std logic library
 
 entity shifter_tb is
 end shifter_tb;
 
 architecture test of shifter_tb is
 
-component shifter
-    generic (
-        N : integer := 16
-    );
-    port(
-        SHIFTINPUT : in  std_logic_vector(15 downto 0);
-        SHIFT_Ctrl : in  std_logic_vector(3 downto 0);
-        SHIFTOUT   : out std_logic_vector(15 downto 0)
-    );
-end component;
-
+--defining the signals
 signal SHIFTINPUT : std_logic_vector(15 downto 0);
 signal SHIFT_Ctrl : std_logic_vector(3 downto 0);
 signal SHIFTOUT   : std_logic_vector(15 downto 0);
 
 begin
-
-	   UUT:shifter
+		 
+	 UUT : entity work.shifter(rtl)
+				 --importing the shifter entity
 port map(
     SHIFTINPUT => SHIFTINPUT,
     SHIFT_Ctrl => SHIFT_Ctrl,
@@ -33,9 +24,9 @@ port map(
 process
 begin
 
-    SHIFTINPUT <= x"1234";
+    SHIFTINPUT <= x"1234";						 --random inputs for testing 
     
-    SHIFT_Ctrl <= "1000";
+    SHIFT_Ctrl <= "1000";							 
     wait for 20 ns;
 
     SHIFT_Ctrl <= "1001";
