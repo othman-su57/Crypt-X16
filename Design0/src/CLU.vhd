@@ -82,7 +82,7 @@ architecture rtl of CLU is
 				when "1000" | "1001" | "1010" => mux_sel <= "10";
 				-- LUT
 				when "1011" => mux_sel <= "11";
-				when others =>mux_sel <= "00";
+				when others =>mux_sel <= "00";  -- "00" -> no operation / default
 			end case;
 		end process;
 			
