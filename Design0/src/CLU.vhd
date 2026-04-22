@@ -65,7 +65,7 @@ architecture rtl of CLU is
 					  ALUctrl => CTRL,      -- CTRL controls ALU operations
 					  ALUOUT => alu_out);
 		SHIFTER_inst: shifter
-	        port map (SHIFTINPUT => A_BUS,  -- Shift operations applied on A_BUS
+	        port map (SHIFTINPUT => B_BUS,  -- Shift operations applied on B_BUS
 			          SHIFT_Ctrl => CTRL,   -- CTRL controls shift type
 			          SHIFTOUT   => shift_out);
 		LUT_inst: non_linear_lookup
