@@ -7,21 +7,6 @@ end register_file_TB;
 
 architecture sim of register_file_TB is
 
-    -- Component Declaration for the Unit Under Test (UUT)
-    component register_file
-    Port ( 
-        clock : in  STD_LOGIC;
-        reset : in  STD_LOGIC;
-        RdWEn : in  STD_LOGIC;
-        RES   : in  STD_LOGIC_VECTOR (15 downto 0);
-        Ra    : in  STD_LOGIC_VECTOR (3 downto 0);
-        Rb    : in  STD_LOGIC_VECTOR (3 downto 0);
-        Rd    : in  STD_LOGIC_VECTOR (3 downto 0);
-        SRCa  : out STD_LOGIC_VECTOR (15 downto 0);
-        SRCb  : out STD_LOGIC_VECTOR (15 downto 0)
-    );
-    end component;
-
     -- Testbench Signals
     signal clock : STD_LOGIC := '0';
     signal reset : STD_LOGIC := '0';
@@ -48,7 +33,7 @@ architecture sim of register_file_TB is
 begin
 
     -- Instantiate the Unit Under Test (UUT)
-    uut: register_file PORT MAP (
+    uut:entity register_file PORT MAP (
         clock => clock,
         reset => reset,
         RdWEn => RdWEn,
